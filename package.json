@@ -1,7 +1,7 @@
 {
   "name": "ast-parents",
   "description": "Walks a JavaScript AST and adds a \"parent\" property to each node",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "browser": "index.js",
   "dependencies": {},
