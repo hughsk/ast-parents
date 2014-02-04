@@ -5,8 +5,8 @@ function addParents(ast, key) {
   return ast
 }
 
-function walk(node, key, parent) {
-  if (parent) Object.defineProperty(node, key, {
+function walk(node, keyname, parent) {
+  if (parent) Object.defineProperty(node, keyname, {
       value: parent
     , configurable: true
     , enumerable: false
@@ -23,11 +23,11 @@ function walk(node, key, parent) {
 
       for (var i = 0; i < l; i++) {
         if (child[i] && child[i].type)
-          walk(child[i], key, child)
+          walk(child[i], keyname, node)
       }
     } else
     if (child && child.type) {
-      walk(child, key, node)
+      walk(child, keyname, node)
     }
   }
 }
